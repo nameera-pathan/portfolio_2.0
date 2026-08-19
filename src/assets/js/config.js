@@ -6,3 +6,5 @@ import '../styles/contact.scss';
 import '../styles/skill.scss';
 import '../styles/about.scss';
 import '../styles/project.scss';
+import '../styles/educert.scss';
+import '../styles/sketchart.scss';

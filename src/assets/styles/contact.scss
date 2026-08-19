@@ -1,15 +1,16 @@
+@use "sass:math";
 $red-color:#f44336;
 $blue-color:#2196f3;
 
 .contact{
     position: relative;
-    // border-top: 1px solid grey;
     width: 100%;
     height: 100vh;
     background: #111;
     color: #fff;
     overflow: hidden;
     display: flex;
+    // margin-top: 4rem;
 
 
     @media (min-width:600px){
@@ -18,9 +19,10 @@ $blue-color:#2196f3;
         }
     }
     
-    @media (min-width:300px) and (max-width:600px){
+    @media (min-width:300px) and (max-width:780px){
         &{
             flex-direction: column;
+            margin-top: 3rem;
         }  
         .contact_left{
             width: 100vw;
@@ -39,7 +41,7 @@ $blue-color:#2196f3;
                 letter-spacing: 4px;
             
                   // S9
-                  @media (min-width:360px) and (max-width:600px){
+                  @media (min-width:360px) and (max-width:780px){
                     & {
                         width: 92vw;
                         height: 14vh;
@@ -131,7 +133,7 @@ $blue-color:#2196f3;
                   @keyframes noise-anim{
                     $steps:10;
                     @for $i from 0 through $steps{
-                      #{percentage($i*(1/$steps))}{
+                      #{percentage($i * math.div(1, $steps))}{
                         clip:rect(random(100)+px,9999px,random(100)+px,0);
                       }
                     }
@@ -150,7 +152,7 @@ $blue-color:#2196f3;
                   @keyframes noise-anim-2{
                     $steps:10;
                     @for $i from 0 through $steps{
-                      #{percentage($i*(1/$steps))}{
+                      #{percentage($i * math.div(1, $steps))}{
                         clip:rect(random(100)+px,9999px,random(100)+px,0);
                       }
                     }
@@ -177,7 +179,7 @@ $blue-color:#2196f3;
 
                 @media (min-width:360px) and (max-width:667px){
                     &{
-                        display: none;
+                        // display: none;
                     }
                 }
             }
@@ -252,7 +254,7 @@ $blue-color:#2196f3;
               @keyframes noise-anim{
                 $steps:10;
                 @for $i from 0 through $steps{
-                  #{percentage($i*(1/$steps))}{
+                  #{percentage($i * math.div(1, $steps))}{
                     clip:rect(random(100)+px,9999px,random(100)+px,0);
                   }
                 }
@@ -271,7 +273,7 @@ $blue-color:#2196f3;
               @keyframes noise-anim-2{
                 $steps:10;
                 @for $i from 0 through $steps{
-                  #{percentage($i*(1/$steps))}{
+                  #{percentage($i * math.div(1, $steps))}{
                     clip:rect(random(100)+px,9999px,random(100)+px,0);
                   }
                 }
@@ -325,7 +327,7 @@ $blue-color:#2196f3;
             border: none;
             color: #fff;
             padding-left: 10px;
-            font-size: 1.2rem;
+            font-size: 1rem;
             background-color: rgb(65, 65, 65);
             &:focus{
                 border: none;
@@ -334,11 +336,11 @@ $blue-color:#2196f3;
         }
         & textarea{
             resize: none;
-            height: 100px;
+            height: 200px;
             width: 100%;
             color: #fff;
             padding-left: 10px;
-            font-size: 1.2rem;
+            font-size: 1rem;
             border: none;
             border-radius: 10px;
             background-color: rgb(65, 65, 65);
@@ -346,6 +348,7 @@ $blue-color:#2196f3;
                 border: none;
                 outline: none;
             }
+            
         }
         & button{
             width: 10vw;
@@ -360,6 +363,13 @@ $blue-color:#2196f3;
             &:hover{
                 background-color:rgb(18, 160, 16);
             }
+
+            @media (min-width:360px) and (max-width:780px){
+                & {
+                     width: 10vw;
+                    height: 7vh;
+                }
+            }
         }
 
     }
@@ -370,6 +380,7 @@ $blue-color:#2196f3;
         display: flex;
         gap: 1rem;
     }
+
 
     .coloredIcon_1{
         color: #fff;
@@ -398,3 +409,4 @@ $blue-color:#2196f3;
         }        
     }
 }
+

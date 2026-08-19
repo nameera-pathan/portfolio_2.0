@@ -1,16 +1,16 @@
     const Skills = [
         'HTML5', 'CSS3', 'JavaScript',
-        'Mongoose', 'React JS',
+        'React JS',  'Full Stack Development',
         'Python', 'SASS', 'SQL',
-        'Django', 'Node JS', 'Redux', 'Mongo DB', 'Git',
-        'Express JS', 'GSAP' , 'MYSQL', 'Bootstrap', 'npm' , 'Tailwind CSS', 'Github'
+        'Django', 'Node JS', 'Redux', 'Mongo DB', 'Git',  ,
+        'Express JS', 'GSAP' , 'MYSQL', 'Bootstrap', 'npm' , 'Tailwind CSS', 'Github', 'SCSS', 'Versioning', 'NoSQL', 'Java', 'C++'
     ];
 
     var tagCloud = TagCloud('.Sphere', Skills, {
 
         // Sphere radius in px
         // radius: 227,
-        radius: window.innerWidth < 700 ? 205 : 230,
+        radius: window.innerWidth < 700 ? 183 : 260,
 
         // animation speed
         // slow, normal, fast
@@ -30,6 +30,7 @@
     // console.log('height here: ', window.innerHeight)
     // Giving color to each text in sphere
     // var color = 'rgb(17, 238, 238)';
-    // let color = '#88f7f7';
-    let color = 'rgb(22, 236, 136)';
+    // let color = '#88f7b6';
+     let color = '#55e076';
+    // let color = '#efe6dd';
     document.querySelector('.Sphere').style.color = color;

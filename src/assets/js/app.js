@@ -39,8 +39,9 @@ let barInterval = setInterval(()=>{
     gsap.to(".socials",{
         duration:1,
         delay:1,
-        bottom:"6.5rem",
+        bottom: window.innerWidth <= 768 ? "10rem" : "6.5rem",
     })
 
    } 
 },20)
+

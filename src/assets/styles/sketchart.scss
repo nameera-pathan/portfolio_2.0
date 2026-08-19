@@ -1,0 +1,254 @@
+
+@use "sass:math";
+.sketchart{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    // margin-top: 5rem;
+    background: #111;
+
+     @media (min-width:360px) and (max-width:844px){
+        & {
+            // border: 1px solid white;
+            height: 95vh; 
+            margin-top: 0rem;
+        }
+    }
+    
+
+            &_head{
+            margin-top: 1px;
+            height: max-content;
+            width: 100%;
+            display: flex;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            border-top: 1px solid rgb(255, 255, 255);
+            justify-content: center;
+            font-size: 6rem;
+            position: inherit;
+            color: #111;
+            z-index: 10;
+            letter-spacing: 4px;
+            background-color: #111;
+            text-shadow: -1px 0 silver, 0 2px white, 2px 0 white, 0 -1px silver;
+            font-weight: 700;
+
+            
+
+            @media (min-width:300px) and (max-width:800px){
+                & {
+                    width: 100%;
+                    height: 10vh;
+                    font-size: 3rem !important;
+                    border-right: none;
+                    margin-top: 3rem;
+                    padding-left: 0;
+                    margin-left: 0;
+                    background-color: #111 ;
+                }
+            
+            }
+
+            @media (min-width:300px) and (max-width:600px){
+                &{
+                    width: 100%;
+                    height: 15vh;
+                    font-size: 4rem;
+                }
+            }
+            @media (min-width:600px){
+                & {
+                    // border-top: 1px solid #F43F5E;
+                }
+            }
+
+            // S9
+            @media (min-width:360px) and (max-width:800px){
+                & {
+                    width: 92vw;
+                    height: 15vh;
+                    transform: skew(0deg);
+                    justify-content: left;
+                    margin-left: 1rem;
+                    border-top: none;
+                    // border-top:2px solid grey;
+                    // border-left:4px solid rgb(218, 218, 218);
+                    border-radius:10px;
+                    padding-top: 0;
+                    padding-left: 10px;
+                    font-size: 4rem;
+                    border-right: none;
+                    background-color: #111 ;
+                    z-index: 10;
+                }
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            // GLITCH
+            .glitch{
+                position:relative;
+            }
+            @keyframes noise-anim{
+                $steps:10;
+                @for $i from 0 through $steps{
+                // #{percentage($i*(1/$steps))}
+                #{percentage($i * math.div(1, $steps))}
+                {
+                    clip:rect(random(100)+px,9999px,random(100)+px,0);
+                }
+                }
+            }
+            .glitch:after{
+                content:attr(data-text);
+                position:absolute;
+                left:2px;
+                top:0;
+                // background:black;
+                overflow:hidden;
+                clip:rect(0,900px,0,0); 
+                animation:noise-anim 2s infinite linear alternate-reverse;
+            }
+            
+            @keyframes noise-anim-2{
+                $steps:10;
+                @for $i from 0 through $steps{
+                // #{percentage($i*(1/$steps))}
+                #{percentage($i * math.div(1, $steps))}{    
+                    clip:rect(random(100)+px,9999px,random(100)+px,0);
+                }
+                }
+            }
+            .glitch:before{
+                content:attr(data-text);
+                position:absolute;
+                left:-2px;
+                top:0;
+                // background:black;
+                overflow:hidden;
+                clip:rect(0,900px,0,0); 
+                animation:noise-anim-2 3s infinite linear alternate-reverse;
+            }
+
+
+    }
+
+ 
+
+        .carousel{
+                margin: 100px auto;
+                width: 80%;
+                height: 60%;
+                display: flex;
+                overflow-x: auto;
+                transform: translateY(-13%);
+                &::-webkit-scrollbar{
+                    display: none;
+                }
+
+                // fade right and left of div
+                mask-image: linear-gradient(to right, transparent, #111 20%, #111 80%, transparent);
+
+                @media (min-width:360px) and (max-width:800px){
+                    &{
+                        height: 70%;
+                        width: 90%;
+                        // border: 1px solid white;
+                        mask-image: linear-gradient(to right, transparent, #111 25%, #111 75%, transparent); 
+                    }
+                }
+            }
+
+        // group
+        .sketchart_box{
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4rem;
+            padding-right: 4rem;
+            animation: scroll-x-infinite 17s infinite linear;
+
+            // card
+            &_card{
+                flex: 0 0 15em;
+                height: 17rem;
+                width: 35rem;
+                // background-color: cornflowerblue;
+                align-content: center;
+                // border: 1px solid rgb(105, 237, 100);
+                border-radius: 20px;
+                       
+                    @media (min-width:360px) and (max-width:800px){
+                        &{
+                            height: 15rem;
+                            width: 25rem;
+                        }
+                    }
+            } 
+
+        }
+
+        @keyframes scroll-x-infinite{
+            from{
+                translate: 0;
+            }
+            to{
+                translate: -100%;
+            }
+        }
+
+
+
+}
+ 
+
+
+// see more images button div
+.sketchart_btndiv{
+    width: 100%;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center ! important;
+    // border: 1px solid pink;
+    & button{
+        width: 17rem;
+        height: 60px;
+        border-radius: 30px ;
+        border: none;
+        letter-spacing: 2px;
+        border: 1px solid white;
+        background: #111;
+        // background: linear-gradient(to right, pink, rgb(169, 194, 243) 25%, rgb(169, 194, 243) 75%, pink );
+        color: white;
+        &:focus{
+            outline: none;
+        }
+
+        &:hover{
+            background-color: white;
+            color: black;
+        }
+
+        transform: translateY(-60%);
+
+         @media (min-width:360px) and (max-width:800px){
+            &{ transform: translateY(-130%);}
+         }
+    }
+}
