@@ -248,7 +248,8 @@
         transform: translateY(-60%);
 
          @media (min-width:360px) and (max-width:800px){
-            &{ transform: translateY(-130%);}
+            // 130
+            &{ transform: translateY(-80%);}
          }
     }
 }
