@@ -198,8 +198,8 @@
 
         @media (min-width:300px) and (max-width:800px){
             &{
-                width: 80%;
-                height: 76vh !important;
+                width: 95%;
+                height: 85vh !important;
                 // border: 1px solid green;
             }
         }
@@ -240,11 +240,11 @@
                     padding-top: 0;
                     padding-bottom: 0;
                     flex-wrap: wrap;
-                    height: 76vh;
+                    height: 73vh;
                     width: 100%;
                     justify-content: center;
                     align-items: center;
-                    padding: 0;
+                    padding: 2rem 0 0 0 ;
                     // gap: 0;
                 }
         }
