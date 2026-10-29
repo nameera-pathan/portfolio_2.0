@@ -1,6 +1,6 @@
     const Skills = [
         'HTML5', 'CSS3', 'JavaScript',
-        'React JS',  'Full Stack Development',
+        'React JS', 'Java',
         'Python', 'SASS', 'SQL',
         'Django', 'Node JS', 'Redux', 'Mongo DB', 'Git',  ,
         'Express JS', 'GSAP' , 'MYSQL', 'Bootstrap', 'npm' , 'Tailwind CSS', 'Github', 'SCSS', 'Versioning', 'NoSQL', 'Java', 'C++'
@@ -10,7 +10,7 @@
 
         // Sphere radius in px
         // radius: 227,
-        radius: window.innerWidth < 700 ? 183 : 260,
+        radius: window.innerWidth < 950 ? 200 : 260,
 
         // animation speed
         // slow, normal, fast
