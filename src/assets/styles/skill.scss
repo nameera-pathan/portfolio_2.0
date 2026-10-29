@@ -19,21 +19,42 @@
             border-top: 1px solid rgb(236, 11, 11);
         }
     }
+    
+    // Iphone 16 / 17 / 18 and 16 / 17 / 18 pro
+    @media (min-width:353px) and (max-width:852px){
+        & {
+            // border: 1px solid white;
+            height: 77vh;
+        }
+    }
 
-    @media (min-width:360px) and (max-width:780px){
+    // galaxy s24/ s25 / vivo v17
+    @media (min-width:360px) and (max-width:800px){
         & {
             // border: 1px solid white;
             // border-top: 1px solid rgb(11, 236, 202);
-            height: 83vh;
+            height: 85vh;
         }
     }
-    
-    @media (min-width:412px) and (max-width:915px){
+
+    // Iphone 16 / 17 / 18 (pro max)
+    @media (min-width:430px) and (max-width:932px){
         & {
             // border: 1px solid white;
-            height: 100vh;
+            height: 72vh;
         }
     }
+
+
+
+
+    // @media (min-width:412px) and (max-width:915px){
+    //     & {
+    //         // border: 1px solid white;
+    //         height: 100vh;
+    //     }
+    // }
+
 
     &_Box{
         display: flex;
@@ -54,6 +75,7 @@
                 row-gap: 15px;
             }
         }
+
     }
 
     &_left{
@@ -154,6 +176,7 @@
 
 
     &_right{
+    
         height: 100vh;
         width: 50%;
         position: relative;
@@ -186,6 +209,7 @@
             & {
                 width: 100vw;
                 height: 50vh;
+                // border: 1px solid white;
                 // font-size: 4rem;
             }
         }
