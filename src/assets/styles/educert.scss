@@ -61,6 +61,7 @@
                 margin-top: 3rem;
                 padding-left: 0;
                 margin-left: 0;
+                text-align: center;
                 background-color: #111;
             }
             
@@ -376,6 +377,14 @@
             // display: none;
         }
     }
+    @media (min-width:353px) and (max-width:700px){
+        &{
+            margin-top: 5rem !important;
+            height: 120px !important;
+            width: 130px !important;
+            // display: none;
+        }
+    }
     @media (min-width:430px) and (max-width:932px){
         &{
             height: 190px !important;
@@ -394,6 +403,13 @@
     & .cert_span{
         padding-bottom: 1rem !important;
         margin-bottom: 20px !important ;
+        
+        // @media (min-width:300px) and (max-width:700px){
+        //     &{
+        //         margin-top: 3rem !important;
+        //         border: 1px solid white;
+        //     }
+        // }
     }
 }
 
