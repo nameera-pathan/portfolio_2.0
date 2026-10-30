@@ -502,20 +502,18 @@
 
         <div class="contact_right">
             <form 
+            spellcheck="false"
             class="contact_form"   
             action="https://formspree.io/f/mrgjwaon"
             method="POST">
                 <label for="name" data-aos="zoom-in">Name</label>
-                <input type="text" id="name" name="name" autocomplete="off" required data-aos="zoom-in">
+                <input type="text" id="name" name="name" autocomplete="off" spellcheck="false" required data-aos="zoom-in">
                 <br>
                 <label for="email" data-aos="zoom-in">Email</label>
-                <input type="email" id="email" name="email" autocomplete="off" required data-aos="zoom-in">
+                <input type="email" id="email" name="email" autocomplete="off" spellcheck="false" required data-aos="zoom-in">
                 <br>
-                <!-- <label for="subject" data-aos="zoom-in">Subject</label>
-                <input type="text" id="subject" name="subject" autocomplete="off" required data-aos="zoom-in">
-                <br> -->
                 <label for="message" data-aos="zoom-in">Message</label>
-                <textarea id="message" name="message" autocomplete="off" required data-aos="zoom-in"></textarea>
+                <textarea id="message" name="message" autocomplete="off" spellcheck="false" required data-aos="zoom-in"></textarea>
                 <br>
                 <button id="btn">Send <i class="fa-solid fa-paper-plane"></i></button>
             </form>
@@ -587,6 +585,7 @@
 <script type="text/javascript" src="assets/js/contact.js"></script> 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script type="text/javascript" src="assets/js/swp.js"></script>
+<script type="text/javascript" src="assets/js/form.js"></script>
 
 </body>
 </html>
