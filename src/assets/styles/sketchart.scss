@@ -236,6 +236,7 @@
     justify-content: center !important;
     align-items: center !important;
     margin-top: 20px;
+    z-index: 10;
     // border: 1px solid pink;
     & button{
         width: 17rem;
@@ -285,6 +286,8 @@
     // margin: 80px auto;
     margin: 0 0;
     overflow: hidden;
+    z-index: 5;
+    // background-color: yellow;
 
     -webkit-mask-image: linear-gradient(
         to right,
@@ -341,6 +344,7 @@
             object-fit: contain;
             // object-fit: cover;
         }
+  
     }
 
     @media (max-width: 800px) {
