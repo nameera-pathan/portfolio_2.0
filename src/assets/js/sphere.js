@@ -10,7 +10,7 @@
 
         // Sphere radius in px
         // radius: 227,
-        radius: window.innerWidth < 950 ? 200 : 260,
+        radius: window.innerWidth < 950 ? 190 : 250,
 
         // animation speed
         // slow, normal, fast
