@@ -10,7 +10,7 @@ $blue-color:#2196f3;
     color: #fff;
     overflow: hidden;
     display: flex;
-    // margin-top: 4rem;
+    margin-top: 4rem;
 
 
     @media (min-width:600px){
@@ -22,7 +22,7 @@ $blue-color:#2196f3;
     @media (min-width:300px) and (max-width:780px){
         &{
             flex-direction: column;
-            margin-top: 3rem;
+            // margin-top: 3rem;
         }  
         .contact_left{
             width: 100vw;
